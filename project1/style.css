@@ -44,4 +44,179 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #050816 ;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+/* نگهدارنده اصلی که نشانگر وضعیت را نسبت به این تنظیم می‌کنیم */
+main .profile-wrapper {
+   position: relative;
+   width: 150px;
+   height: 150px;
+   cursor: pointer;
+}
+
+main .profile {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 3px solid rgba(79, 70, 229, 0.2);
+   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   -moz-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   -ms-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   -o-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+main .profile-wrapper:hover .profile {
+    border-color: #4F46E5;
+    box-shadow: 0 0 25px rgba(79, 70, 229, 0.5),
+                0 0 50px rgba(34, 211, 238, 0.2);
+    transform: scale(1.05);
+}
+
+main .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+main .profile-wrapper:hover .profile img {
+    transform: scale(1.15) rotate(3deg);
+}
+
+main .online-status {
+    position: absolute;
+    bottom: 10px;
+    right: 18px;
+    width: 16px;
+    height: 16px;
+    background-color: #6EE7B7;
+    border: 1px solid #050816;
+    border-radius: 50%;
+    z-index: 10;
+    animation: onlinePulse 1.8s infinite ease-out;
+}
+
+@keyframes onlinePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.6); /* هاله درخشان رنگ جدید */
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px 8px rgba(110, 231, 183, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(110, 231, 183, 0);
+  }
+}
+
+
+
+.menu{
+  position: relative;
+  background-color: #0B1226;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 12px;
+  width: 300px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(34,211,238,0.15);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  -webkit-transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  -moz-transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  -ms-transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  -o-transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%)rotate(45deg);
+  width: 16px;
+  height: 16px;
+  background-color: #0B1226;
+  z-index: -1;
+  box-shadow: -3px -3px 8px rgba(34, 211, 238, 0.15);
+  border-radius: 2px;
+  -webkit-transform: translate(-50%)rotate(45deg);
+  -moz-transform: translate(-50%)rotate(45deg);
+  -ms-transform: translate(-50%)rotate(45deg);
+  -o-transform: translate(-50%)rotate(45deg);
+}
+
+.menu h3{
+    color: #E6F1FF;
+    font-size: 20px;
+    font-family: vazirBlack;
+}
+.menu h3 span{
+    font-size: 14px;
+    margin-right: 15px;
+    font-family: vazir;
+    font-weight: 500;
+    color: #9FB3D1;
+}
+.menu ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  text-align: right;
+}
+
+.menu ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 5px;
+padding: 10px;
+ cursor: pointer;
+}
+
+.menu ul li i{
+    font-size: 20px;
+    color: #9FB3D1
+;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #E6F1FF;
+    font-size: 16px;
+}
+.menu ul li:hover {
+   background-color: #16204A;
+   border-radius: 8px;
+}
+main .menu.active{
+max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
