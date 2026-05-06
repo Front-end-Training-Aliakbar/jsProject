@@ -1,0 +1,82 @@
+/*---------------------
+ENTER FONT
+-----------------------*/
+/* FONT ISANS */
+@font-face {
+  font-family: 'isans';
+  src: url('../fonts/isans.eot');
+  src:
+         url('../fonts/isans.ttf')  format('truetype'),
+       url('../fonts/isans.woff2') format('woff2'),
+       url('../fonts/isans.woff') format('woff');
+}
+/* font Vazir */
+@font-face {
+  font-family: 'vazir';
+  src: url('../fonts/vazir.eot');
+  src:
+         url('../fonts/vazir.ttf')  format('truetype'),
+       url('../fonts/vazir.woff2') format('woff2'),
+       url('../fonts/vazir.woff') format('woff');
+}
+/* font Vazir bold */
+@font-face {
+  font-family: 'vazirBlack';
+  src: url('../fonts/vazir-Black.eot');
+  src:
+         url('../fonts/vazir-Black.ttf')  format('truetype'),
+       url('../fonts/vazir-Black.woff2') format('woff2'),
+       url('../fonts/vazir-Black.woff') format('woff');
+
+}
+
+/* rest css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'vazir' , 'vazirBlack' , 'isans';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main{
+    position: relative;
+    width: 100%;
+}
+main video{
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+main .navi{
+       position: absolute;
+       left: 50%;
+       bottom: 20px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 50vw;
+       transform:translateX(-50%) ;
+       -webkit-transform:translateX(-50%) ;
+       -moz-transform:translateX(-50%) ;
+       -ms-transform:translateX(-50%) ;
+       -o-transform:translateX(-50%) ;
+       list-style: none;
+}
+main .navi li img{
+    width: 100px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+}
