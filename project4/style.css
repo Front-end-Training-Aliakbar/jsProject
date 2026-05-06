@@ -38,7 +38,7 @@ ENTER FONT
 }
 
 body{
-  font-family: 'vazir' , 'vazirBlack' , 'isans';
+  font-family: 'vazir' , 'vazirBlack' , 'isans' ,serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,6 +116,7 @@ body{
     -moz-transition: width 0.5s ease-in-out;
     -ms-transition: width 0.5s ease-in-out;
     -o-transition: width 0.5s ease-in-out;
+    font-family: inherit;
 
 }
 .search input:focus{
