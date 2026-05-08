@@ -22,7 +22,7 @@ window.addEventListener('scroll', function () {
 //     }, 10);
 // })
 toTop.addEventListener('click', function (e) {
-    e.preventDefault;
+    e.preventDefault();
 
     function scrollToTop() {
         if (window.pageYOffset > 0) {
@@ -33,4 +33,3 @@ toTop.addEventListener('click', function (e) {
     }
     requestAnimationFrame(scrollToTop)
 })
-
