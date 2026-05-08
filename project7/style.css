@@ -1,0 +1,88 @@
+/*---------------------
+ENTER FONT
+-----------------------*/
+/* FONT ISANS */
+@font-face {
+  font-family: 'isans';
+  src: url('../fonts/isans.eot');
+  src:
+         url('../fonts/isans.ttf')  format('truetype'),
+       url('../fonts/isans.woff2') format('woff2'),
+       url('../fonts/isans.woff') format('woff');
+}
+/* font Vazir */
+@font-face {
+  font-family: 'vazir';
+  src: url('../fonts/vazir.eot');
+  src:
+         url('../fonts/vazir.ttf')  format('truetype'),
+       url('../fonts/vazir.woff2') format('woff2'),
+       url('../fonts/vazir.woff') format('woff');
+}
+/* font Vazir bold */
+@font-face {
+  font-family: 'vazirBlack';
+  src: url('../fonts/vazir-Black.eot');
+  src:
+         url('../fonts/vazir-Black.ttf')  format('truetype'),
+       url('../fonts/vazir-Black.woff2') format('woff2'),
+       url('../fonts/vazir-Black.woff') format('woff');
+
+}
+
+/* rest css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'vazir' , 'vazirBlack' , 'isans', 'serif';
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100vh;
+    font-size: 50px;
+}
+.one{
+    background-color: #ffa4a4;
+}
+.two{background-color: #a4f99c;}
+.three{background-color: #afe0ff;}
+.four{background-color: #e9adff;}
+.toTop{
+    position: fixed;
+    bottom: 25px;
+    right: 50px;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius:30px ;
+    -webkit-border-radius:30px ;
+    -moz-border-radius:30px ;
+    -ms-border-radius:30px ;
+    -o-border-radius:30px ;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition:  opacity 0.7s ease-in-out, bottom 0.7s ease-in-out;
+    -webkit-transition:  opacity 0.7s ease-in-out, bottom 0.7s ease-in-out;
+    -moz-transition:  opacity 0.7s ease-in-out, bottom 0.7s ease-in-out;
+    -ms-transition:  opacity 0.7s ease-in-out, bottom 0.7s ease-in-out;
+    -o-transition:  opacity 0.7s ease-in-out, bottom 0.7s ease-in-out;
+}
+.toTop.active{
+    opacity: 1;
+    bottom: 40px;
+}
+a{
+    text-decoration: none;
+}
