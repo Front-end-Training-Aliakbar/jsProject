@@ -1,0 +1,88 @@
+/*---------------------
+ENTER FONT
+-----------------------*/
+/* FONT ISANS */
+@font-face {
+  font-family: 'isans';
+  src: url('../fonts/isans.eot');
+  src:
+         url('../fonts/isans.ttf')  format('truetype'),
+       url('../fonts/isans.woff2') format('woff2'),
+       url('../fonts/isans.woff') format('woff');
+}
+/* font Vazir */
+@font-face {
+  font-family: 'vazir';
+  src: url('../fonts/vazir.eot');
+  src:
+         url('../fonts/vazir.ttf')  format('truetype'),
+       url('../fonts/vazir.woff2') format('woff2'),
+       url('../fonts/vazir.woff') format('woff');
+}
+/* font Vazir bold */
+@font-face {
+  font-family: 'vazirBlack';
+  src: url('../fonts/vazir-Black.eot');
+  src:
+         url('../fonts/vazir-Black.ttf')  format('truetype'),
+       url('../fonts/vazir-Black.woff2') format('woff2'),
+       url('../fonts/vazir-Black.woff') format('woff');
+
+}
+
+/* rest css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'vazir' , 'vazirBlack' , 'isans', serif;
+}
+/* تاپ هدر */
+.progress{
+    background-color: #6e9df4;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+/* متن تاپ هدر */
+.progress h2{
+    color: #fff;
+    padding-top: 20px;
+}
+/* نوار پیش رونده بک گراندش*/
+.progerssbar{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(208, 208, 208);
+}
+/* نوار پیش رونده */
+.progerssbar .pro{
+    width: 0%;
+    height: 100%;
+    display: block;
+    background:linear-gradient(to right ,#f35c5c, #4f5cee);
+}
+/* متن اولیه */
+h2{
+    font-size: 30px;
+    padding: 10px;
+    font-family: vazirBlack;
+}
+/* دیو متن */
+.mtn{
+    margin-top: 98px;
+    padding: 0 60px;
+}
+/* استیال متن ها */
+.mtn p{
+    font-size: 24px;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
