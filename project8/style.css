@@ -57,7 +57,8 @@ header h1{
     margin-bottom: 25px;
 }
 header p {
-    width: 800px;
+    max-width: 800px;
+    width: 90%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -79,21 +80,23 @@ header span{
     -moz-transition: left 0.7s ease-in-out;
     -ms-transition: left 0.7s ease-in-out;
     -o-transition: left 0.7s ease-in-out;
+    cursor: pointer;
 }
 header span.active{
     left:200px;
 }
-.mtn{
-    width: 900px;
+.content{
+    max-width: 900px;
+    width: 90%;
     margin: 50px auto;
 }
-.mtn p{
+.content p{
     font-size: 18px;
     text-align: justify;
     line-height: 1.8;
 
 }
-.menu{
+aside{
         position: fixed;
         top: 0;
         left:-200px ;
@@ -111,10 +114,10 @@ header span.active{
         -ms-transition: left 0.7s ease-in-out;
         -o-transition: left 0.7s ease-in-out;
 }
-.menu.active{
+aside.active{
     left:0;
 }
-.menu .profile__image{
+aside .profile__image{
     width: 120px;
     height: 120px;
     overflow: hidden;
@@ -126,12 +129,12 @@ header span.active{
     margin-top: 100px;
     margin-bottom: 30px;
 }
-.menu .profile__image img{
+aside .profile__image img{
     object-fit: cover;
     width: 120px;
     height: 120px;
 }
-.menu .ivoMenu ul li{
+aside  .ivoMenu ul li{
     list-style: none;
     margin-bottom: 15px;
     padding: 7px 15px;
@@ -146,11 +149,12 @@ header span.active{
     -ms-transition: background-color 0.5s ease-in-out;
     -o-transition: background-color 0.5s ease-in-out;
 }
-.menu .ivoMenu ul li:hover{
+aside .ivoMenu ul li:hover{
     background-color: #434a43;
 }
-.menu .ivoMenu ul li a{
+aside .ivoMenu ul li a{
     text-decoration: none;
     color: white;
     font-size: 20px;
+    display: block;
 }

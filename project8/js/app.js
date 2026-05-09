@@ -1,7 +1,7 @@
-const charkh = document.querySelector(".charkhan");
-const menu = document.querySelector(".menu")
+const toggle = document.querySelector(".menu-toggle");
+const content = document.querySelector("aside")
 
-charkh.addEventListener('click', function () {
-    menu.classList.toggle("active");
-    charkh.classList.toggle("active")
+toggle.addEventListener('click', function () {
+    content.classList.toggle("active");
+    toggle.classList.toggle("active")
 })
