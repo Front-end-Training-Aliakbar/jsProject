@@ -1,0 +1,156 @@
+/*---------------------
+ENTER FONT
+-----------------------*/
+/* FONT ISANS */
+@font-face {
+  font-family: 'isans';
+  src: url('../fonts/isans.eot');
+  src:
+         url('../fonts/isans.ttf')  format('truetype'),
+       url('../fonts/isans.woff2') format('woff2'),
+       url('../fonts/isans.woff') format('woff');
+}
+/* font Vazir */
+@font-face {
+  font-family: 'vazir';
+  src: url('../fonts/vazir.eot');
+  src:
+         url('../fonts/vazir.ttf')  format('truetype'),
+       url('../fonts/vazir.woff2') format('woff2'),
+       url('../fonts/vazir.woff') format('woff');
+}
+/* font Vazir bold */
+@font-face {
+  font-family: 'vazirBlack';
+  src: url('../fonts/vazir-Black.eot');
+  src:
+         url('../fonts/vazir-Black.ttf')  format('truetype'),
+       url('../fonts/vazir-Black.woff2') format('woff2'),
+       url('../fonts/vazir-Black.woff') format('woff');
+
+}
+
+/* rest css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'vazir' , 'vazirBlack' , 'isans';
+}
+header{
+    position: relative;
+    top:0;
+    right: 0;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #152315;
+    color: white;
+}
+header h1{
+    font-family: vazirBlack;
+    margin-bottom: 25px;
+}
+header p {
+    width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+header span{
+    position: fixed;
+    top: 20px;
+    left: 0;
+    background-color: #8383836a;
+    backdrop-filter: blur(10px);
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: left 0.7s ease-in-out;
+    -webkit-transition: left 0.7s ease-in-out;
+    -moz-transition: left 0.7s ease-in-out;
+    -ms-transition: left 0.7s ease-in-out;
+    -o-transition: left 0.7s ease-in-out;
+}
+header span.active{
+    left:200px;
+}
+.mtn{
+    width: 900px;
+    margin: 50px auto;
+}
+.mtn p{
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.8;
+
+}
+.menu{
+        position: fixed;
+        top: 0;
+        left:-200px ;
+        width: 200px;
+        background-color: #152315;
+        border-right: 2px solid #adeead;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+        transition: left 0.7s ease-in-out;
+        -webkit-transition: left 0.7s ease-in-out;
+        -moz-transition: left 0.7s ease-in-out;
+        -ms-transition: left 0.7s ease-in-out;
+        -o-transition: left 0.7s ease-in-out;
+}
+.menu.active{
+    left:0;
+}
+.menu .profile__image{
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.menu .profile__image img{
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+}
+.menu .ivoMenu ul li{
+    list-style: none;
+    margin-bottom: 15px;
+    padding: 7px 15px;
+    border-radius: 12px ;
+    -webkit-border-radius: 12px ;
+    -moz-border-radius: 12px ;
+    -ms-border-radius: 12px ;
+    -o-border-radius: 12px ;
+    transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+}
+.menu .ivoMenu ul li:hover{
+    background-color: #434a43;
+}
+.menu .ivoMenu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
